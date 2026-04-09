@@ -74,10 +74,4 @@ Use a safe client-side key only. Do not commit service-role keys, `.env` files, 
 - Sensitive machine-specific files such as `local.properties` should remain untracked.
 - Review backend auth rules and database policies before deploying to production.
 
-## Status
 
-This project is an early-stage Android client and ingestion companion for the broader WealthPulse product.
-
-## License
-
-No license has been added yet. If you plan to make this repository public for broader use, consider adding a license file.
