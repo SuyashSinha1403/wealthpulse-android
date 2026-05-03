@@ -20,8 +20,8 @@ fun WealthPulseCard(
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(containerColor = SurfaceDark),
-        border = BorderStroke(1.dp, BorderDark),
+        colors = CardDefaults.cardColors(containerColor = SurfaceDark.copy(alpha = 0.92f)),
+        border = BorderStroke(1.dp, BorderDark.copy(alpha = 0.95f)),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Column(
@@ -39,8 +39,8 @@ fun WealthPulseButtonFilled(
 ) {
     Button(
         onClick = onClick,
-        modifier = modifier.fillMaxWidth().height(48.dp),
-        shape = RoundedCornerShape(8.dp),
+        modifier = modifier.fillMaxWidth().height(52.dp),
+        shape = RoundedCornerShape(12.dp),
         colors = ButtonDefaults.buttonColors(containerColor = PrimaryEmerald, contentColor = Color.White)
     ) {
         Text(text = text, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
@@ -55,10 +55,10 @@ fun WealthPulseButtonOutlined(
 ) {
     OutlinedButton(
         onClick = onClick,
-        modifier = modifier.fillMaxWidth().height(48.dp),
-        shape = RoundedCornerShape(8.dp),
+        modifier = modifier.fillMaxWidth().height(52.dp),
+        shape = RoundedCornerShape(12.dp),
         colors = ButtonDefaults.outlinedButtonColors(contentColor = PrimaryEmerald),
-        border = BorderStroke(1.dp, PrimaryEmerald)
+        border = BorderStroke(1.dp, PrimaryEmerald.copy(alpha = 0.72f))
     ) {
         Text(text = text, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
     }
