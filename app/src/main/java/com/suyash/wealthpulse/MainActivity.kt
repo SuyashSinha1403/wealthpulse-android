@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    WebViewScreen(url = "https://wealthpulse-ai.lovable.app/auth")
+                    WebViewScreen(url = "https://wealthpulse-ai.lovable.app/auth?app=wealthpulse-android-v2")
                 }
             }
         }

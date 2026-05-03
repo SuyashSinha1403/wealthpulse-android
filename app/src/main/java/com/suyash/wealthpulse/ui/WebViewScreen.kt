@@ -6,6 +6,7 @@ import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.webkit.WebStorage
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.CircularProgressIndicator
@@ -46,8 +47,12 @@ fun WebViewScreen(url: String) {
             AndroidView(
                 factory = { context ->
                     WebView(context).apply {
+                        WebStorage.getInstance().deleteAllData()
+                        clearCache(true)
+                        clearHistory()
                         settings.javaScriptEnabled = true
                         settings.domStorageEnabled = true
+                        settings.cacheMode = android.webkit.WebSettings.LOAD_NO_CACHE
                         webViewClient = object : WebViewClient() {
                             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                                 isLoading = true
